@@ -1,0 +1,234 @@
+:root {
+  --ease-in-out: all 0.5s ease;
+  --turqoise: rgb(37, 134, 125);
+  --light-turqoise: rgb(54, 206, 191);
+  --small-color: rgb(88, 88, 88);
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+/* ------------LANDING PAGE------------ */
+.toTop {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.185),
+      rgba(255, 255, 255, 0.692)
+    ),
+    url(/pawel-czerwinski-OfwiURcZwYw-unsplash.jpg);
+  background-size: cover;
+}
+
+/* ------TOP BAR------ */
+#top_bar {
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+/* TOP BAR business logo */
+
+.business_logo {
+  color: var(--turqoise);
+  font-size: xx-large;
+  flex: 1;
+  text-transform: uppercase;
+}
+
+/* TOP BAR navigation menu */
+
+.navbar {
+  flex: 2;
+}
+.navbar ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+}
+
+/* TOP BAR sign in and login buttons */
+
+.login_signup {
+  flex: 1;
+  max-width: fit-content;
+}
+
+/* ------LANDING PAGE HOOK------ */
+#landing_hook {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  align-items: center;
+  text-align: center;
+  margin-top: 5em;
+  padding: 2.5em 0;
+}
+#landing_hook small {
+  text-transform: uppercase;
+  color: var(--turqoise);
+  font-weight: bold;
+}
+#landing_hook h1 {
+  font-family: serif;
+  font-size: 60px;
+  margin: 0;
+}
+#landing_hook p {
+  margin: 2em 0;
+  color: var(--small-color);
+}
+#getstarted {
+  width: 150px;
+  height: 45px;
+}
+#trysekurity {
+  width: 150px;
+  height: 45px;
+}
+
+/* -----LANDING PAGE CUSTOMER REVIEW------ */
+#land_customer_review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+  margin-top: 2em;
+  padding: 2.5em 0;
+  text-align: center;
+}
+#land_customer_review small {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--turqoise);
+}
+#land_customer_review h3 {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 30px;
+  font-family: serif;
+  font-weight: 200;
+}
+#landing_customer_img {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+#landing_customer_name {
+  color: var(--small-color);
+}
+#landing_customer_occupation {
+  color: black;
+}
+.customer {
+  display: flex;
+  align-items: center;
+}
+
+/* LANDING PAGE INFORMATION CARDS  */
+#landing_cards {
+  display: flex;
+  justify-content: space-around;
+  font-family: sans-serif;
+}
+.card {
+  text-align: center;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.144);
+  background-color: #fff;
+}
+.card i {
+  color: var(--light-turqoise);
+  font-size: xx-large;
+}
+.card p {
+  color: var(--light-turqoise);
+}
+.card small {
+  color: var(--small-color);
+}
+
+/* COLLECTIVE STYLING */
+
+/* buttons */
+
+.dark-btn {
+  cursor: pointer;
+  background-color: rgb(40, 40, 48);
+  width: 110px;
+  height: 38px;
+  color: #fff;
+  border-radius: 0.4em;
+  font-weight: bold;
+  font-size: 15px;
+  border: 1px solid rgb(48, 42, 42);
+  outline: none;
+  transition: var(--ease-in-out);
+}
+.dark-btn:hover {
+  background: transparent;
+  color: black;
+  transition: var(--ease-in-out);
+}
+.dark-btn:focus {
+  outline: none;
+}
+
+.light-btn {
+  cursor: pointer;
+  background: transparent;
+  width: 110px;
+  height: 38px;
+  color: black;
+  border-radius: 0.4em;
+  font-weight: bold;
+  font-size: 15px;
+  border: 1px solid black;
+  transition: var(--ease-in-out);
+}
+.light-btn:hover {
+  background-color: black;
+  color: white;
+  transition: var(--ease-in-out);
+}
+.light-btn:focus {
+  outline: none;
+}
+
+/* MEDIA QUERYS */
+
+/* TOP BAR MEDIA QUERYS */
+@media only screen and (min-width: 1400px) {
+  #top_bar {
+    max-width: 1300px;
+    margin: auto;
+    padding: 1em 0;
+  }
+}
+/* LANDING PAGE CARDS MEDIA QUERYS*/
+@media only screen and (min-width: 1400px) {
+  #landing_cards {
+    max-width: 1500px;
+    margin: auto;
+  }
+  .card {
+    max-width: 280px;
+    max-height: 600px;
+    margin: 4em;
+    padding: 4em 1em;
+    width: 100%;
+  }
+  .card p {
+    font-size: x-large;
+  }
+  .card small {
+    line-height: 170%;
+  }
+}
